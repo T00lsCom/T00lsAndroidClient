@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:icon="@drawable/ic_login_24dp"
+        android:id="@+id/login_or_logout"
+        android:title="登录"
+        app:showAsAction="collapseActionView"
+        android:orderInCategory="100"/>
+    <item
+        android:icon="@drawable/ic_info_outline_24dp"
+        android:id="@+id/about_t00ls"
+        android:title="关于t00ls"
+        app:showAsAction="collapseActionView"
+        android:orderInCategory="100"/>
+</menu>

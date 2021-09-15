@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.t00ls">
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+        android:name=".T00lsApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/applog"
+        android:label="@string/app_name"
+        android:logo="@mipmap/applog"
+        android:roundIcon="@mipmap/applog"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <meta-data
+            android:name="BUGLY_APPID"
+            android:value="41fd45035a" />
+        <meta-data
+            android:name="BUGLY_ENABLE_DEBUG"
+            android:value="false" />
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".ui.activity.LoginActivity"
+            android:theme="@style/DialogActivity">
+        </activity>
+        <activity
+            android:name=".ui.activity.WebViewActivity"
+            android:theme="@style/NoTitleTranslucentTheme">
+        </activity>
+        <activity android:name=".ui.activity.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.AboutActivity"
+            android:theme="@style/NoTitleTranslucentTheme">
+        </activity>
+
+        <service
+            android:name=".service.UpdateService"
+            android:exported="false">
+        </service>
+
+        <provider
+            android:exported="false"
+            android:grantUriPermissions="true"
+            android:authorities="com.t00ls.fileProvider"
+            android:name="android.support.v4.content.FileProvider">
+            <meta-data
+                android:resource="@xml/file_paths"
+                android:name="android.support.FILE_PROVIDER_PATHS"/>
+        </provider>
+    </application>
+
+</manifest>
