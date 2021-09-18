@@ -49,7 +49,7 @@ public class AboutActivity extends AppCompatActivity {
                 intent.putExtra(Intent.EXTRA_EMAIL, "admin@t00ls.cc");
                 startActivity(Intent.createChooser(intent, "请选择邮箱"));
             }
-        }, 12, 27, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        }, 12, 26, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         email.setText(emailString);
         email.setMovementMethod(LinkMovementMethod.getInstance());
 
